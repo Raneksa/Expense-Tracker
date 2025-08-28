@@ -2,13 +2,27 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Lottie from 'lottie-react'
 import animationData from './assets/Ai-powered marketing tools abstract.json'
+import Login from './Login'
+import SignUp from './SignUp'
 
 function App() {
   const [isVisible, setIsVisible] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
+  const [showSignUp, setShowSignUp] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  const handleAuthChange = (type) => {
+    if (type === 'login') {
+      setShowSignUp(false)
+      setShowLogin(true)
+    } else {
+      setShowLogin(false)
+      setShowSignUp(true)
+    }
+  }
 
   return (
     <>
@@ -16,7 +30,7 @@ function App() {
         <nav>
           <i>Expense Trackers</i>
           <div className='button'>
-            <button>Log in</button>
+            <button onClick={() => setShowLogin(true)}>Log in</button>
             <button>Submit</button>
           </div>
         </nav>
@@ -61,6 +75,16 @@ function App() {
           </div>
         </p>
       </div>
+
+      {showLogin && <Login 
+        onClose={() => setShowLogin(false)} 
+        onSignUp={() => handleAuthChange('signup')}
+      />}
+      
+      {showSignUp && <SignUp 
+        onClose={() => setShowSignUp(false)}
+        onBackToLogin={() => handleAuthChange('login')}
+      />}
     </>
   )
 }
