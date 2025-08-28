@@ -50,8 +50,15 @@ function App() {
           transform: `translateX(${isVisible ? '0' : '50px'})`,
           transition: 'opacity 1s ease-in-out, transform 1s ease-in-out'
         }}>
-          Welcome to your personal expense dashboard. Track your spending, categorize your expenses, and gain real-time insights into where your money goes. <br />
-          Stay organized, set monthly budgets, and make smarter financial decisions <br /> with ease. Your financial health starts here.
+          Track and manage your expenses effortlessly. <br /> Get insights, set budgets, and take control of your finances today.
+          <div className="flex justify-center w-full mt-6">
+            <button 
+              className="px-6 py-2 bg-blue-600 text-white rounded-md font-dena 
+              hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started
+            </button>
+          </div>
         </p>
       </div>
     </>
