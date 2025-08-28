@@ -1,12 +1,18 @@
+@import 'tailwindcss';
+
+
 body{
   background:linear-gradient(90deg,black,blue 100%);
   padding: 0;
   left: 0;
   right: 0;
 }
+
+
+
 @font-face {
   font-family: 'dena';
-  src: url('../public/fonts/Dena.ttf');
+  src: url('./fonts/Dena.ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -49,4 +55,34 @@ h1{
   flex-direction: row;
   align-items: center;
   
+}
+.button button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #0066ff, #003399);
+  color: white;
+  font-family: 'dena';
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
+}
+
+.text p {
+  color: white;
+  font-family: quicksand, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  flex-basis: 50%;
 }
