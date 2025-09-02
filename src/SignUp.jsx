@@ -50,9 +50,11 @@ function SignUp({ onClose, onBackToLogin }) {
       // Ici, tu pourrais afficher un message de succès ou rediriger
       setIsLoading(false);
       onClose && onClose();
-    } catch (err) {
+    } catch (error) {
       setIsLoading(false);
-      setErrors({ submit: "Erreur lors de la création du compte." });
+      setErrors({
+        submit: error.message || "Erreur lors de la création du compte.",
+      });
     }
   };
 

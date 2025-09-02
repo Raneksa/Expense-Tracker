@@ -18,7 +18,10 @@ export default [
       },
     },
     rules: {
-      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
+      "no-unused-vars": ["error", { 
+        varsIgnorePattern: "^(prisma|[A-Z_])",  // Ajout de 'prisma' aux exceptions
+        argsIgnorePattern: "^_" 
+      }],
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",

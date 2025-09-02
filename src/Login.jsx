@@ -45,7 +45,7 @@ function Login({ onClose, onSignUp }) {
       onClose && onClose();
     } catch (err) {
       setIsLoading(false);
-      setErrors({ submit: "Erreur lors de la connexion." });
+      setErrors({ submit: `Erreur lors de la connexion: ${err.message}` });
     }
   };
 
