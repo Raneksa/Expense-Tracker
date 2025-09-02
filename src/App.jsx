@@ -31,7 +31,7 @@ function App() {
           <i>Expense Trackers</i>
           <div className='button'>
             <button onClick={() => setShowLogin(true)}>Log in</button>
-            <button>Submit</button>
+            <button onClick={() => handleAuthChange('signup')}>Get Started</button>
           </div>
         </nav>
       </div>
@@ -66,13 +66,7 @@ function App() {
         }}>
           Track and manage your expenses effortlessly. <br /> Get insights, set budgets, and take control of your finances today.
           <div className="flex justify-center w-full mt-6">
-            <button 
-              onClick={() => handleAuthChange('signup')}
-              className="px-6 py-2 bg-blue-600 text-white rounded-md font-dena 
-              hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </button>
+            
           </div>
         </p>
       </div>
