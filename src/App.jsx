@@ -26,6 +26,11 @@ function App() {
 
   return (
     <>
+      <div>
+        <button>-</button>
+        <h1>0</h1>
+        <button>+</button>
+      </div>
       <div className='Nav-container'>
         <nav>
           <i>Expense Trackers</i>
